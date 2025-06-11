@@ -41,14 +41,14 @@ The architectural workflow is visualized below, illustrating data flow, integrat
 
 ```mermaid
 graph TD
-    A[DSN Cloud Database (T-SQL)] --> B[Microsoft SSIS]
+    A[DSN Cloud Database - T-SQL] --> B[Microsoft SSIS]
     B --> C[RCM Data Layer]
     C --> D[Azure SQL Database]
     D --> E[PowerBI Service]
     D --> F[Microsoft Copilot AI]
     E --> G[C-Level Dashboard]
     F --> G
-    G --> H[C-Level & Senior Management]
+    G --> H[C-Level and Senior Management]
 
     subgraph RCM_Application
         C --> I[ASP.NET Core API]
@@ -111,5 +111,6 @@ This document serves as both a GitHub README for the project repository and a pr
 
 ---
 
-Let me know if you'd like this exported as a PDF or if you need a fallback image version of the diagram for platforms that don't support Mermaid rendering.
+Let me know if you’d like a version of this exported as PDF, or a fallback PNG of the diagram if GitHub rendering is ever disabled or restricted.
+
 
