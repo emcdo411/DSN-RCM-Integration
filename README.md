@@ -90,11 +90,11 @@ graph TD
 
 ```mermaid
 graph LR
-    A[AWS Database<br/>(Data Storage)] --> B[Sage Intacct Core<br/>(Claims Processing)]
-    B --> C[Dental-Exec<br/>Integration]
-    B --> D[SaaS Intelligence<br/>(Analytics)]
-    D --> E[Sage Copilot<br/>(AI Insights)]
-    E --> F[Billing Output<br/>(Reports)]
+    A[AWS Database (Data Storage)] --> B[Sage Intacct Core (Claims Processing)]
+    B --> C[Dental-Exec Integration]
+    B --> D[SaaS Intelligence (Analytics)]
+    D --> E[Sage Copilot (AI Insights)]
+    E --> F[Billing Output (Reports)]
     C --> F
 
     classDef db fill:#A3C6FF
@@ -189,6 +189,7 @@ graph LR
 ## 🏁 Credits
 
 This case study was developed by the DSN project team in collaboration with analytical support from **Grok (xAI)** and presented to **Moudy Taleb, Software Architect at DSN**.
+
 
 
 
