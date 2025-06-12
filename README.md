@@ -86,32 +86,26 @@ graph TD
     end
 ```
 
-### Sage Intacct Workflow (DiagrammeR)
+### Sage Intacct Workflow (Mermaid-Compatible)
 
-```r
-library(DiagrammeR)
+```mermaid
+graph LR
+    A[AWS Database<br/>(Data Storage)] --> B[Sage Intacct Core<br/>(Claims Processing)]
+    B --> C[Dental-Exec<br/>Integration]
+    B --> D[SaaS Intelligence<br/>(Analytics)]
+    D --> E[Sage Copilot<br/>(AI Insights)]
+    E --> F[Billing Output<br/>(Reports)]
+    C --> F
 
-grViz("
-digraph RCM_workflow {
-  graph [rankdir = LR, fontsize = 10]
-  node [shape = box, style = filled, fillcolor = '#D3E3FC']
-  A [label = 'AWS Database\n(Data Storage)', fillcolor = '#A3C6FF']
-  B [label = 'Sage Intacct Core\n(Claims Processing)', fillcolor = '#B8D4FF']
-  C [label = 'Dental-Exec\nIntegration', fillcolor = '#A3C6FF']
-  D [label = 'SaaS Intelligence\n(Analytics)', fillcolor = '#8BB8FF']
-  E [label = 'Sage Copilot\n(AI Insights)', fillcolor = '#7AA5FF']
-  F [label = 'Billing Output\n(Reports)', fillcolor = '#B8D4FF']
+    classDef db fill:#A3C6FF
+    classDef logic fill:#B8D4FF
+    classDef ai fill:#7AA5FF
+    classDef vis fill:#8BB8FF
 
-  A -> B [label = 'Data Feed']
-  B -> C [label = 'Sync via API']
-  B -> D [label = 'Processed Data']
-  D -> E [label = 'Analytics Query']
-  E -> F [label = 'Insights']
-  C -> F [label = 'Operational Data']
-
-  {rank = same; A; C}
-  {rank = same; B; D; E}
-}")
+    class A,C db
+    class B,F logic
+    class D vis
+    class E ai
 ```
 
 ---
