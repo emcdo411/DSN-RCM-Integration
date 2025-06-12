@@ -90,11 +90,11 @@ graph TD
 
 ```mermaid
 graph LR
-    A[AWS Database (Data Storage)] --> B[Sage Intacct Core (Claims Processing)]
-    B --> C[Dental-Exec Integration]
-    B --> D[SaaS Intelligence (Analytics)]
-    D --> E[Sage Copilot (AI Insights)]
-    E --> F[Billing Output (Reports)]
+    A[AWS_DB] --> B[Sage_Intacct_Core]
+    B --> C[Dental_Exec_Integration]
+    B --> D[SaaS_Intelligence]
+    D --> E[Sage_Copilot]
+    E --> F[Billing_Reports]
     C --> F
 
     classDef db fill:#A3C6FF
